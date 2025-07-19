@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Mundo </h1>
+    <p> Onde você vive?<p>
+    <input type="search" name="txtpa" id="txtpa">
+    <input type="button" value="enter" onclick="procurar()">
+    <div id = 'resp'></div>
+    <script>
+        function procurar(){
+            var txtnac = window.document.getElementById('txtpa')
+            var resp = window.document.getElementById('resp')
+            var pais = txtnac.value
+            resp.innerHTML= pais 
+            if (pais =='Brasil'){
+                window.document.write(`<p>Você nasceu no ${pais} <br> <p> você é brasileiro`)
+            }else{
+                window.document.write(`Você é estrangeiro. <br> Seja bem-vindo ao Brasil!`)
+            }
+
+        }
+    </script>
+</body>
+</html>

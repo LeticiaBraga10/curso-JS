@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu teste</title>
+    <style>
+        body{
+            background-color: rgba(234, 142, 49, 0.785);
+        div#area{
+            background-color: rgba(136, 71, 5, 0.926);
+            color: rgb(254, 254, 255);
+            text-align: center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="area">
+        CLIQUE AQUI!
+    </div>
+    <script>
+        window.document.write('<h1>Jornal do dia:<br><br><br><h1>')   
+        window.document.writeln('*Hoje foram identificados vários incidentes na rodovia.')
+        var a =window.document.getElementById('area')
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout',sair)
+        function clicar(){
+            a.innerText='C L I C O U !'
+            a.style.backgroundColor='green'
+            a.style.color='orange'
+            a.style.textAlignLast='center'
+        }
+    </script>
+</body>
+</html>

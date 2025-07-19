@@ -1,0 +1,160 @@
+<index class="html">
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini YouTube</title>
+    <link rel="stylesheet" href="style.css">
+    <style class="css">
+        /* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Lista de vídeos */
+.video-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.video-item {
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+}
+
+.video-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.video-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Player de vídeo */
+.video-player {
+    margin-top: 20px;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 640px;
+    border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header-content">
+            <h1>Mini YouTube</h1>
+            <input type="text" id="search" placeholder="Pesquisar vídeos...">
+        </div>
+    </header>
+
+    <!-- Lista de vídeos -->
+    <div class="video-list">
+        <h2>Vídeos Recomendados</h2>
+        <div class="video-item" onclick="playVideo('https://www.w3schools.com/html/movie.mp4')">
+            <img src="https://via.placeholder.com/150" alt="Video Thumbnail">
+            <p>Vídeo 1: Exemplo de vídeo</p>
+        </div>
+        <div class="video-item" onclick="playVideo('https://www.w3schools.com/html/movie.mp4')">
+            <img src="https://via.placeholder.com/150" alt="Video Thumbnail">
+            <p>Vídeo 2: Exemplo de vídeo</p>
+        </div>
+        <div class="video-item" onclick="playVideo('https://www.w3schools.com/html/movie.mp4')">
+            <img src="https://via.placeholder.com/150" alt="Video Thumbnail">
+            <p>Vídeo 3: Exemplo de vídeo</p>
+        </div>
+    </div>
+
+    <!-- Player de vídeo -->
+    <div class="video-player">
+        <h2>Assistindo: Vídeo Exemplo</h2>
+        <video id="videoPlayer" width="640" controls>
+            <source src="https://youtu.be/B4Ecpo_i5-Y?si=fh5rvakJqOntxv9v" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+
+    <footer>
+        <p>Mini YouTube © 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script class="js">
+        // Função para trocar o vídeo e atualizar o título
+function playVideo(videoUrl, videoTitle) {
+    const videoPlayer = document.getElementById('videoPlayer');
+    const videoTitleElement = document.querySelector('.video-player h2');
+    
+    // Trocar a fonte do vídeo
+    videoPlayer.src = videoUrl;
+    
+    // Atualizar o título do vídeo
+    videoTitleElement.textContent = `Assistindo: ${videoTitle}`;
+    
+    // Reproduzir o vídeo imediatamente após a troca
+    videoPlayer.play();
+}
+
+    </script>
+</body>
+</html>
+
+</index>
