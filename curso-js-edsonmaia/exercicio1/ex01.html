@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 01 (Edson maia)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+        
+        .card{
+            background-image: linear-gradient(to bottom,rgba(4, 9, 72, 0.729), rgba(47, 47, 110, 0.679),rgba(0, 0, 0, 0.96));
+            width: 300px;
+            height: 600px;
+            border-radius: 10px;
+            box-shadow: 8px 6px 16px rgba(0, 0, 0, 0.649);
+            
+        }
+        #foto-fedor{
+            width: 250px;
+            transform: translate(10%,20%); 
+        }
+        .dado{
+            padding-top: 50px;
+            padding-left: 10px;
+            color: rgb(0, 0, 0);
+            text-transform: uppercase;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            p{
+                color: white;
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 0.281),rgba(6, 3, 3, 0.334));
+                border-radius: 20px;
+                width: 250px;
+                height: 30px;
+                margin-left: 15px;
+            }
+            h2{
+                color: rgb(52, 48, 48);
+            }
+        }
+        .dado > p:hover{
+            background-color: rgba(0, 162, 255, 0.388);
+            transition-duration: 1.1s;
+            transform-style: flat;
+        }
+        #frase{
+            background-image: url('textura.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.701);
+            margin-top: 70px;
+            margin-bottom: 40px;
+            width: 600px;
+            height: 300px;
+
+        }
+        section#frase > p{
+            font-size: 30px;
+            padding: 60px;
+            font-family: "Edu NSW ACT Cursive", cursive;
+        }
+        #meses{
+            padding-top: 30px;
+            text-align: center;
+            background-color: rgba(88, 90, 69, 0.774);
+            border-radius: 5px;
+            box-shadow: 3px 5px 10px black;
+            height: 140px;
+            width: 350px;
+            h1{
+                text-decoration: underline;
+            }
+        }
+        #meses:hover{
+            background-color: rgba(0, 255, 255, 0.327);
+        }
+        section#jogo{
+            background-image: url('fundo.png');
+            background-size: cover;
+            height: 400px;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 4px 7px 10px black;
+        }
+        section#jogo > form > p {
+            margin: auto;
+            margin-bottom: 50px;
+            width: 300px;
+            height: 30px;
+            font-weight: bolder;
+            
+            
+        }
+        section#jogo > h1{
+            text-align: center;
+            padding-top: 20px;
+            font-size: 2em;
+        }
+        .p1{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="card">
+            
+            <img id="foto-fedor" src="fedor.png" alt="foto-fedor">
+            
+            <div class="dado" id="dadosLutador">
+                <!-- Dados do Java script-->
+            </div>
+        </div>
+        <section id="frase">
+           <p>PENSADOR
+            Cada dia traz uma nova
+            oportunidade para
+            cultivar a gratidão e
+            lutar pelo que se quer! 
+            <br>
+            <q>-Leca</q></p>
+        </section>
+        <div id="meses">
+
+        </div>
+        <section id="jogo">
+            <h1>Jogo</h1>
+            <form action="script.js">
+                <p>
+                
+                    <label for="ititulo" class="p1">Título:</label>
+                    <input type="text" name="titulo" id="ititulo" placeholder="nome do jogo....">
+                </p>
+                <p>
+                    <label for="ides">Desenvolvedor: </label>
+                    <input type="text" name="des" id="ides" placeholder="Desenvolvedor...">
+                </p>
+                <p>
+                    <label for="iano" class="p1">Ano: </label>
+                    <input type="number" name="ano" id="iano" placeholder="ano de lanççamento...">
+                </p>
+                <input type="submit" value="enviar">
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
